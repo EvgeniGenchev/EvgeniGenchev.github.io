@@ -117,10 +117,7 @@ section::before
  bottom: 0;
  width: 100%;
  height: 100px;
- /*background: linear-gradient(to top, #4B8CA8, transparent);*/
- /* background: linear-gradient(to top, #f2c67d, transparent); */
-
- background: linear-gradient(to top, #372516, transparent);
+ background: linear-gradient(to top, #6b4f38, transparent);
  z-index: 1000;
 }
 
@@ -154,6 +151,44 @@ section img#mountains_front
  z-index: 9;
 }
 
+/* projects button */
+.btn.btn-outline-brown{
+     border: solid 1px #312C28;
+     border-radius: 1em;
+     color: #312C28 !important;
+}
+
+.btn-outline-brown:hover,
+.btn-outline-brown:focus,
+.btn-outline-brown:active,
+.btn-outline-brown.active,
+.open .dropdown-toggle.btn-outline-brown {
+  color: #312C28 !important;
+  background-color:  #7c6f62;
+  border-radius: 1em;
+  box-shadow: 4px 4px 0px #312C28;
+}
+
+/* footer button */
+.btn.btn-outline-browne{
+     border: solid 1px #dab271;
+     border-radius: 1em;
+     color: #312C28 !important;
+}
+
+.btn-outline-browne:hover,
+.btn-outline-browne:focus,
+.btn-outline-browne:active,
+.btn-outline-browne.active,
+.open .dropdown-toggle.btn-outline-browne {
+  background-color: #f2c67d;
+  color: #312C28 !important;
+  border-color: #f2c67d;
+  border-radius: 1em;
+  box-shadow: 4px 4px 0px #dab271;
+}
+/* end footer button */
+
 #btn
 {
  text-decoration: none;
@@ -171,9 +206,9 @@ section img#mountains_front
 {
  position: relative;
  padding: 5vw;
- /*background: #4B8CA8;*/
- background: #372516;
+ background: #6b4f38;
 }
+
 
 .sec h2
 {
@@ -184,7 +219,7 @@ section img#mountains_front
 
 .sec p
 {
- font-size: 1.5em;
+ font-size: calc(0.9rem + .6vw);
  color: #fff;
 }
 
@@ -209,15 +244,55 @@ section img#mountains_front
      margin-right: auto;
      border-radius: 2em;
      width: 95%;
+     box-shadow: 18px 18px 0px #5585b5;
 
 }
+
+.componentWraper {
+  margin: 40px;
+  position: relative;
+  border-radius: 2em;
+  background:  #7c6f64;
+  padding: 20px;
+  box-shadow: 18px 18px 0px #312C28;
+}
+
+.componentTitle {
+ color: #fff;
+ text-align: center;
+ background: #312C28;
+ border-radius: 2em;
+ font-size: calc(1.4rem + .6vw)
+}
+
+.badge.autofont {
+     font-size: calc(1rem + .1vw);
+}
+
+.componentWraper .componentTitle {
+  position: absolute;
+  top: -15px;
+  padding: 0 1em;
+}
+
+#abm {
+     font-size: calc(0.9rem + .6vw)
+}
+
+.bg-brown
+{
+     background: #312C28;
+}
+
+
 
 #sndfl{
      margin-top: 1em;
      margin-left: auto;
      margin-right: auto;
-     border-radius: 2em;
+     border-radius: 4em;
      width: 95%;
+     box-shadow: 18px 18px 0px #7c6f64;
 }
 
 
@@ -225,23 +300,19 @@ section img#mountains_front
 {
      display: block;
      background: #f2c67d;
-     border-radius:  2em;
+     border-radius:  7em;
+     box-shadow: 18px 18px 0px #dab271 /*, -18px -18px 0px #ffda8a*/;
 }
+
 #yoda
 {
      width: 70%;
 }
+
 #pr
 {
-     display: block;
-     margin-left: auto;
-     margin-right: auto;
-     width: 95%;
-     height: auto;
-     background: #f2c67d;
-     border-radius:  50px;
+     text-align: center;
 }
-
 
 footer {
   text-align: center;
@@ -249,12 +320,12 @@ footer {
   background-color: #f2c67d;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-  color: #372516;
+  color: #6b4f38;
 }
 
 #bgb
 {
-     background: #372516;
+     background: #6b4f38;
 }
 
 footer a {
