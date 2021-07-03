@@ -245,12 +245,15 @@ section img#mountains_front
 }
 
 #lls{
-     margin-left: auto;
-     margin-right: auto;
-     border-radius: 2em;
+     border-radius: 3em;
      width: 95%;
      box-shadow: 18px 18px 0px #5585b5;
+}
 
+#lls:hover {
+     width: 100%;
+     height: auto;
+     box-shadow: 32px 32px 0px #5585b5;
 }
 
 .componentWraper {
@@ -261,6 +264,18 @@ section img#mountains_front
   padding: 20px;
   box-shadow: 18px 18px 0px #312C28;
 }
+
+.componentWraper:hover {
+  margin: 40px;
+  position: relative;
+  border-radius: 2em;
+  background:  #7c6f62;
+  padding: 20px;
+  right: 10px;
+  bottom: 10px;
+  box-shadow: 40px 40px 0px #312C28;
+}
+
 
 .componentTitle {
  color: #fff;
@@ -299,6 +314,7 @@ section img#mountains_front
      width: 95%;
      box-shadow: 18px 18px 0px #7c6f64;
 }
+
 
 
 .aboutme
