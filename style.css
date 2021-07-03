@@ -121,6 +121,8 @@ section::before
  z-index: 1000;
 }
 
+
+
 section img
 {
  position: absolute;
@@ -207,11 +209,14 @@ section img#mountains_front
  transform: translateY(100px);
 }
 
+
 .sec
 {
  position: relative;
  padding: 5vw;
- background: #6b4f38;
+ /* background-image: url('sw.png'); */
+ /* background: #6b4f38; */
+background: linear-gradient(0deg, rgba(124,111,100,1) 0%, rgba(107,79,56,1) 42%, rgba(107,79,56,1) 100%);
 }
 
 
@@ -321,8 +326,10 @@ section img#mountains_front
 {
      display: block;
      background: #f2c67d;
+     background-image: url('sw.png');
      border-radius:  7em;
      box-shadow: 18px 18px 0px #dab271 /*, -18px -18px 0px #ffda8a*/;
+
 }
 
 #yoda
@@ -346,7 +353,7 @@ footer {
 
 #bgb
 {
-     background: #6b4f38;
+     background: #7c6f64;
 }
 
 footer a {
