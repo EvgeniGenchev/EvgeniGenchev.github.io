@@ -1,231 +1,179 @@
-<!doctype html>
-<html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>My Portfolio</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-</head>
-<body>
-	<header class="mb-auto" id="header">
-		<div>
-			<h3 class="li text-center float-md-start mb-0 logo">&lt;Evgeni Genchev/&gt;</h3>
-			<nav class="ul nav nav-masthead justify-content-center float-md-end">
-				<a class="li nav-link active" aria-current="page" href="">Home</a>
-				<a class="li nav-link" href="#pr">Projects</a>
-				<a class="li nav-link" href="#ft">Contacts</a>
-			</nav>
-		</div>
-	</header>
-	<section>
-		<img src="stars.png" id="stars">
-		<img src="two_suns.png" id="moon">
-		<h2 id="text">Welcome to my website</h2>
-		<a href="#sec" id="btn">About me</a>
-		<img src="desert_background.png" id="mountains_behind">
-		<!-- <img src="mountains_front.png" id="mountains_front"> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evgeni Genchev</title>
 
-		<img src="house.png" id="mountains_front">
-	</section>
-	<div class="sec" id="sec">
-		<p>
-			<div class="p-4 p-md-5 mb-4 text-white aboutme">
-				<div class="row">
-					<div class="col-md-6 px-0">
-						<div class='componentWraper'>
-							<h3 class='componentTitle'>About me</h3>
-							<p class="lead my-3" id="abm">Back-end Python Developer with two years of experience with Python and one freelancing with Django. Linux user and Free Software advocate. Currently in my second year in Saxion University of Applied Science as Applied Computer Science student and working at <a href="https://dhr.is/" id='dhr'>DHR Engineering</a>👷 </p>
-						</div>
-					</div>
-					<div class="col-md-6 px-0 align-items-center justify-content-center">
-						<img src="yoda.png" class="center" id="yoda">
-					</div>
-				</div>
-			</div>
-			<br><br></p>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <meta name="theme-color" content="#111118" />
 
-			<p>
-				<div class="p-4 p-md-5 mb-4 text-white aboutme">
-					<div class="row">
-						<div class="col-md-6 px-0">
-							<img src="R2.png" class="center" id="r2">
-						</div>
-						<div class="col-md-6 px-0">
-							<div class='componentWraper'>
-								<h3 class='componentTitle'>Skills & Certification</h3>
-								<p class="lead my-3 mt-5">
-									<div class="text-center mb-2">
-										<span class="badge rounded-pill bg-primary mb-1 autofont">Technical Skills</span>
-										<span class="badge rounded-pill bg-brown autofont">Python</span>
-										<span class="badge rounded-pill bg-brown autofont">C</span>
-										<span class="badge rounded-pill bg-brown autofont">C++</span>
-										<span class="badge rounded-pill bg-brown autofont">SQL</span>
-										<span class="badge rounded-pill bg-brown autofont">LaTeX</span>
-										<span class="badge rounded-pill bg-brown autofont">Linux</span>
-										<span class="badge rounded-pill bg-brown autofont">Git</span>
-										<span class="badge rounded-pill bg-brown autofont">AVR</span>
-									</div>
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap");
 
+      html {
+        font-family: "IBM Plex Mono", monospace;
+      }
 
+      body {
+        padding: 0 0.5rem 1rem;
+        max-width: calc(min(80ch, round(down, 100%, 1ch)));
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
 
-									<div class="text-center mb-2">
-										<span class="badge rounded-pill bg-danger mb-1 autofont">Soft Skills</span>
-										<span class="badge rounded-pill bg-brown autofont">Team player</span>
-										<span class="badge rounded-pill bg-brown autofont">Active listener</span>
-										<span class="badge rounded-pill bg-brown autofont">Leadership</span>
-									</div>
+      a {
+        word-break: break-all;
+      }
 
+      h1,
+      h2 {
+        font-weight: 700;
+        text-transform: uppercase;
+      }
 
+      h2 {
+        font-size: 1.2rem;
+        margin: 2.3rem 0 1.2rem;
+      }
 
-									<div class="text-center">
-										<span class="badge rounded-pill bg-warning mb-1 autofont">Certification</span>
-										<span class="badge rounded-pill bg-brown autofont">Solo Learn: Python Core </span>
-										<span class="badge rounded-pill bg-brown autofont">Solo Learn: C </span><br>
-									</div>
-								</p>
-							</div>
+      .content {
+        padding: 0 1rem;
+      }
 
-						</div>
+      ul {
+        padding: 0 1.2rem;
+      }
 
-					</div>
-				</div>
-				<br><br></p>
+      p,
+      li {
+        font-size: 1rem;
+        line-height: 1.2;
+        word-break: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+		text-align: justify;
+      }
 
-				<br>
-				<p>
-					<div class="aboutme">
-						<h2 id="pr" > Projects 📐 </h2>
-					</div>
-					<br><br></p>
+      li {
+        margin-bottom: 0.3rem;
+      }
 
-					<p>
-						<div class="p-4 p-md-5 mb-4 text-white aboutme">
-							<div class="row">
-								<div class="col-md-6 px-0 center">
-									<div class='componentWraper'>
-										<h3 class='componentTitle'>BadPico 👹</h3>
-										<div class="text-center">
-											<p class="lead my-3">Ducky script emulator running on Raspberry Pi Pico.
-												Written in Circuit Python 🐍</p>
-												<a type="button" class="btn btn-outline-brown btn-lg px-4 me-sm-3 fw-bold center" href="https://github.com/EvgeniGenchev/BadPico">
-													<img src="https://img.icons8.com/material-outlined/26/000000/github.png"/>
-													Repo</a>
-												</div>
+      hr {
+        border: none;
+        height: 0.1rem;
+        background-color: transparent;
+        width: 100%;
+        margin: 30px auto;
+        border-top: 3px solid black;
+        border-bottom: 3px solid black;
+      }
 
-											</div>
+      .word-wrap {
+        word-break: break-all;
+      }
+    </style>
+  </head>
 
+  <body>
+    <h1>Evgeni Genchev</h1>
+	<hr>
+    <p>
+		Hello, there! My name is Evgeni and this is my website. I am a passionate and detail-oriented Computer Scientist with an academic background in Cybersecurity and Artificial Intelligence. Skilled in API development, machine learning, and artificial intelligence, with a recent interest in 3D graphics through Gaussian Splatting. Adept at building scalable systems and solving complex problems, I thrive in collaborative environments that encourage innovation. My goal is to bridge the gap between secure systems and intelligent applications, driving forward-thinking digital solutions.
+    </p>
+    <p>Links:</p>
+    <ul>
+      <li>
+        [Orcid]
+        <a href="https://orcid.org/0009-0004-2538-8344" target="_blank"
+          >https://orcid.org/0009-0004-2538-8344</a
+        >
+      </li>
+      <li>
+        [Github]
+        <a href="https://github.com/EvgeniGenchev/" target="_blank"
+          >https://github.com/EvgeniGenchev/</a
+        >
+      </li>
 
-										</div>
-										<div class="col-md-6 px-3">
-											<div>
-												<img src="enok.png" class="center mt-2" id="enok"/>
-											</div>
-											<!-- <img src="enok.png" class="center mt-2" id="enok"> -->
-										</div>
-									</div>
-								</div>
-								<br><br></p>
+      <li>
+        [LinkedIn]
+        <a href="https://www.linkedin.com/in/evgeni-genchev-3142751a4" target="_blank"
+          >https://www.linkedin.com/in/evgeni-genchev-3142751a4</a
+        >
+      </li>
+    </ul>
 
-								<p>
-									<div class="p-4 p-md-5 mb-4  aboutme mb-3 container-fluid">
-										<div class="row">
+    <hr />
+    <h2>What may you know me from</h2>
+    <p>
+      <strong>3D Printing Farm</strong> <br />
+	  I spend 2 years as a Team lead and lead developer in a commercial 3D Printing Farm solution at <a href="https://dhr.is/">DHR Engineering</a>. Notably the project was endorsed by BambuLabs.
+	  <br> <br>
+		<strong> Notes of the Networks</strong> <br />
+	  I wrote a comprehensive github repository on the basics of computer netwroking, which have been freqently used by Saxion University of Applied Sciences students.
+   
+	<br> <br>
+		<strong> BadPico</strong> <br />
+		I wrote a ducky script emulator running on Raspberry Pi Pico.
+		Written in Circuit Python. 
 
-											<div class="col-lg-4 px-1">
-												<img src="https://user-images.githubusercontent.com/59848681/118872070-7af91600-b8e8-11eb-841d-3339d1910c12.png"  id="lls">
-											</div>
-											<div class="col-md-8 px-0 center">
-												<div class='componentWraper'>
-													<div class="text-center">
-														<h3 class='componentTitle'>Windows ls 📑</h3>
-														<br>
-														<p class="lead my-3">Small script that mimics the base functionality of the beloved unix' ls command to Windows 💠</p>
-														<a type="button" class="btn btn-outline-brown btn-lg px-4 me-sm-3 fw-bold center btna" href="https://github.com/EvgeniGenchev/Windows-ls"><img src="https://img.icons8.com/material-outlined/26/000000/github.png"/> Repo</a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<br><br></p>
+	<br> <br>
+		<strong> comment-nvim </strong> <br />
+		I wrote an extension for fast commenting in Neovim.
 
-									<p>
-										<div class="p-4 p-md-5 mb-4 text-white aboutme ">
-											<div class="row">
-												<div class="col-md-6 px-0 center">
-													<div class='componentWraper'>
-														<div class="text-center">
-															<h3 class='componentTitle'>send_file &#9889;</h3>
-															<p class="lead my-3">Simple client-server based TCP file transfer service with Diffie Hellman key exchange implementation and Fernet symetric key encryption.</p>
-															<a type="button" class="btn btn-outline-brown btn-lg px-4 me-sm-3 fw-bold center" href="https://github.com/EvgeniGenchev/send_file"><img src="https://img.icons8.com/material-outlined/26/000000/github.png"/> Repo</a>
-														</div>
-													</div>
-												</div>
-												<div class="col-md-6 px-0">
-													<img src="https://user-images.githubusercontent.com/59848681/121398010-3398ff00-c955-11eb-93b2-c490d2120c68.png" class="" id="sndfl">
-												</div>
-											</div>
-										</div>
-										<br><br></p>
+	</p>
 
-										<p>
-											<div class="p-4 p-md-5 mb-4  aboutme mb-3">
-												<div class="row">
+	<div>
+	  <h2> <strong> What I am learning </strong></h2>
+	  <img src="https://skillicons.dev/icons?i=docker,rabbitmq,zig" alt="skills actively learning logos"> <br> 
+	  <h2> <strong> What I know </strong></h2>
+	  <img src="https://skillicons.dev/icons?i=fastapi,mongodb,git,raspberrypi,django,neovim,pytorch,py,arduino,bash" alt="skills planning to learn logos">
+	</div>
 
-													<div class="col-lg-4">
-														<img src="storm2.png" class="center" id="stm">
-													</div>
-													<div class="col-md-8 px-0 center">
-														<div class='componentWraper'>
-															<div class="text-center">
-																<h3 class='componentTitle'>The Notes of Network 📜</h3>
-																<br>
-																<p class="lead my-3">The Notes of Network is a Markdown document that include notes that I have made during reading Computer Networking: A Top-Down Approach, 6th Edition. The notes are targeted towards people who might want to learn Data Networks basics and re-learners as a cheat sheet.</p>
-																<a type="button" class="btn btn-outline-brown btn-lg px-4 me-sm-3 fw-bold center" href="https://github.com/EvgeniGenchev/The_Notes_Of_Networks"><img src="https://img.icons8.com/material-outlined/26/000000/github.png"/> Repo</a>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<br></p>
+    <h2>What I am interested in?</h2>
+    <ul>
+      <li>
+        <strong>Cybersecurity</strong>: In today's world everything is 
+		connected through the internet. Notably, banking, governmental 
+		documents and your whole social life. I strongly believe in the
+		autonomy of people and i wish to protect this autonomy in the 
+		netwrok space.
+      </li>
 
+      <li>
+        <strong>Open source</strong>: I am an avid advocate of open source
+        values. Knowledge, science and culture should not be only for the
+		once who can afford them.
+      </li>
 
-										</div>
-										<div id='bgb'>
-											<footer id='ft'>
-												<div class="container my-3" id="icon-grid" >
-													<div class="col-md-12 text-center">
-														<a type="button" class=" btn btn-outline-browne btn-lg  fw-bold" href="https://github.com/EvgeniGenchev"><img src="https://img.icons8.com/material-outlined/26/000000/github.png"/> GitHub</a>
-														<a type="button" class="btn btn-outline-browne btn-lg   fw-bold" href="https://www.linkedin.com/in/evgeni-genchev-3142751a4/"><img <img src="https://img.icons8.com/metro/26/000000/linkedin.png"/> LinkedIn</a>
-														<a type="button" class="btn btn-outline-browne btn-lg  fw-bold" href="mailto:evgena.genchev@tutanota.com"><img src="https://img.icons8.com/ios-filled/26/000000/apple-mail.png"/> Tutanota</a>
-														<a type="button" class="btn btn-outline-browne btn-lg  fw-bold" href="https://koyu.space/web/accounts/237645"><img src="https://img.icons8.com/windows/26/000000/mastodon.png"/> Mastodon</a>
-													</div>
-												</div>
-												<!-- <p>&#127756; I am a HUGE star wars fan btw &#127756; </p> -->
-											</footer>
-										</div>
+      <li>
+        <strong>Gaussian Splatting</strong>: I have been introduced to the
+		the world of 3D Reconstruction since my Bachelor's thesis (Resarch and integration of a SLAM system in Boston Dynamics Spot Robot). Since then I have continued my work in 3D Reconstruction in <a href="https://www.saxion.nl/onderzoek/lectoraten/technologies-for-criminal-investigations">Technologies for Criminal Investigation</a> in Gaussian Splatting and I am soon to publish my first paper on the subject matter.
+      </li>
 
-										<script>
-										let stars = document.getElementById("stars");
-										let moon = document.getElementById("moon");
-										let mountains_behind = document.getElementById("mountains_behind");
-										let mountains_front = document.getElementById("mountains_front");
-										let text = document.getElementById("text");
-										let btn = document.getElementById("btn");
-										// let header = document.getElementById("header");
+      <li>
+        <strong>Machine Learning and Artificial Intelligence</strong>: I
+		am part time working the AI and CAD systems lab in Sofia Tech Park
+		where we focus on solving real life problems with the use of AI.
+      </li>
+    </ul>
 
-										window.addEventListener("scroll", function(){
-											let value = window.scrollY;
-											stars.style.left = value /100 + "em";
-											moon.style.top = value * 1.05 + "px";
-											mountains_behind.style.top = value * 0.5 + "px";
-											mountains_front.style.top = value * 0 + "px";
-											text.style.marginRight = value * 4 + "px";
-											btn.style.marginTop = value * 1.05 + "px";
-											// header.style.marginLeft = value * 1 + "px";
-										})
+    <h2>Open for work?</h2>
+    <p>
+      I am always looking for new oportunities and interesting projects to work on. If you have a cool idea you want to discuss feel free to contact me! 
+    </p>
+	<h2>Blog Posts</h2>
+		<ul>
+		  <li>
+			  <a>I don't have any posts yet :(</a>
+		  </li>
+		</ul>
 
-
-										</script>
-									</body>
-
-									</html>
+	<hr />
+  </body>
+</html>
