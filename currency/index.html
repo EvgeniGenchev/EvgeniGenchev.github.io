@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Currency Converter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-100">
+  <main class="flex-grow flex items-center justify-center">
+    <div class="bg-white p-8 rounded shadow-md w-full max-w-md text-center">
+      <h1 class="text-2xl font-bold mb-4">Currency Converter</h1>
+      <div class="mb-4">
+        <label class="block mb-1 text-left font-semibold">Amount</label>
+        <input id="amount" type="number" class="w-full border rounded p-3" value="1" min="0" />
+      </div>
+      <div class="mb-4 flex gap-4">
+        <div class="w-1/2">
+          <label class="block mb-1 text-left font-semibold">From</label>
+          <select id="from-currency" class="w-full border rounded p-3"></select>
+        </div>
+        <div class="w-1/2">
+          <label class="block mb-1 text-left font-semibold">To</label>
+          <select id="to-currency" class="w-full border rounded p-3"></select>
+        </div>
+      </div>
+      <button id="convert" class="bg-blue-600 text-white px-4 py-2 rounded w-full">Convert</button>
+      <p id="result" class="mt-4 text-lg font-semibold text-gray-700"></p>
+    </div>
+  </main>
+  <footer class="bg-white text-center text-gray-500 py-4">
+    Created by Evgeni Genchev
+  </footer>
+  <script>
+    const amountInput = document.getElementById('amount');
+    const fromCurrency = document.getElementById('from-currency');
+    const toCurrency = document.getElementById('to-currency');
+    const result = document.getElementById('result');
+    const convertBtn = document.getElementById('convert');
+
+    // Fallback URLs
+    const primaryBase = 'https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1';
+    const fallbackBase = 'https://latest.currency-api.pages.dev/v1';
+
+    // Fetch list of currencies
+    async function fetchCurrencies() {
+      try {
+        const res = await fetch(`${primaryBase}/currencies.json`);
+        const data = await res.json();
+        return data;
+      } catch (e) {
+        const res = await fetch(`${fallbackBase}/currencies.json`);
+        const data = await res.json();
+        return data;
+      }
+    }
+
+    // Populate currency dropdowns
+    async function populateCurrencies() {
+      const currencies = await fetchCurrencies();
+      for (const code in currencies) {
+        const option1 = document.createElement('option');
+        option1.value = code;
+        option1.textContent = `${code.toUpperCase()} - ${currencies[code]}`;
+        fromCurrency.appendChild(option1);
+
+        const option2 = document.createElement('option');
+        option2.value = code;
+        option2.textContent = `${code.toUpperCase()} - ${currencies[code]}`;
+        toCurrency.appendChild(option2);
+      }
+      fromCurrency.value = 'usd';
+      toCurrency.value = 'eur';
+    }
+
+    // Fetch exchange rates
+    async function fetchRates(base) {
+      try {
+        const res = await fetch(`${primaryBase}/currencies/${base}.json`);
+        const data = await res.json();
+        return data[base];
+      } catch (e) {
+        const res = await fetch(`${fallbackBase}/currencies/${base}.json`);
+        const data = await res.json();
+        return data[base];
+      }
+    }
+
+    // Convert currency
+    async function convertCurrency() {
+      const amount = parseFloat(amountInput.value);
+      const from = fromCurrency.value;
+      const to = toCurrency.value;
+      if (isNaN(amount) || amount <= 0) {
+        result.textContent = 'Please enter a valid amount.';
+        return;
+      }
+      result.textContent = 'Converting...';
+      try {
+        const rates = await fetchRates(from);
+        const rate = rates[to];
+        if (!rate) {
+          result.textContent = 'Conversion rate not available.';
+          return;
+        }
+        const converted = (amount * rate).toFixed(4);
+        result.textContent = `${amount} ${from.toUpperCase()} = ${converted} ${to.toUpperCase()}`;
+      } catch (e) {
+        result.textContent = 'Error fetching exchange rates.';
+      }
+    }
+
+    convertBtn.addEventListener('click', convertCurrency);
+    window.addEventListener('DOMContentLoaded', populateCurrencies);
+  </script>
+</body>
+</html>
